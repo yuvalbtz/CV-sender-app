@@ -1,0 +1,11 @@
+{
+  "name": "Supabase Chrome MV2",
+  "version": "0.01",
+  "description": "Supabase Chrome MV2",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "app"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://hbmyfotznqemwtkbmeyw.supabase.co; object-src 'self'"
+}

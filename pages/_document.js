@@ -5,6 +5,13 @@ import createEmotionCache from '../utility/createEmotionCache';
 
 export default class MyDocument extends Document {
   render() {
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
     return (
       <Html lang="en">
         <Head>
@@ -12,8 +19,32 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+        <meta name="google-signin-client_id" content="84381794991-5k2s3o8msvkl73ghjl6r30lnfguelrim.apps.googleusercontent.com"></meta>
         </Head>
         <body>
+    
+
+        {/* <div id="loaderContainer">
+    <div className="loader">
+    <div className="dot"></div>
+    </div>
+    <div className="loader">
+        <div className="dot"></div>
+    </div>
+    <div className="loader">
+        <div className="dot"></div>
+    </div>
+    <div className="loader">
+        <div className="dot"></div>
+    </div>
+    <div className="loader">
+        <div className="dot"></div>
+    </div>
+    <div className="loader">
+        <div className="dot"></div>
+    </div>
+    </div> */}
+   
           <Main />
           <NextScript />
         </body>
